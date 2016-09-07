@@ -15,7 +15,7 @@ double Duration = 0; //受信した間隔
 double Distance = 0; //距離
 
 void setup() {
-  Serial.begin( 9600 );
+//  Serial.begin( 9600 );
   pinMode( ECHO_PIN, INPUT );
   pinMode( TRIG_PIN, OUTPUT );
   myservo.attach( SERV_PIN );  //サーボの角度命令出力ピンとして設定  
@@ -31,11 +31,11 @@ void loop() {
   if (Duration > 0) {
     Duration = Duration/2; //往復距離を半分にする
     Distance = Duration*340*100/1000000; // 音速を340m/sに設定
-    Serial.print( "Respons:" );
-    Serial.print( Duration );
-    Serial.print( " Distance:" );
-    Serial.print( Distance );
-    Serial.println( " cm" );
+//    Serial.print( "Respons:" );
+//    Serial.print( Duration );
+//    Serial.print( " Distance:" );
+//    Serial.print( Distance );
+//    Serial.println( " cm" );
   }
 
   // 7～30cmの時にロック解除
@@ -59,7 +59,7 @@ int servo_cnt( int ang ){
     if( myservo.attached() == false )
       myservo.attach( SERV_PIN );   //デジタル9番ピンをサーボの角度命令出力ピンとして設定
     myservo.write( ang );           //サーボを動かす
-    Serial.println( ang );
+//    Serial.println( ang );
     delay( 1000 );
     myservo.detach();
   }
