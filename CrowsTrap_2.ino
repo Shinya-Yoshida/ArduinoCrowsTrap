@@ -39,7 +39,7 @@ void loop() {
   }
 
   // 7～30cmの時にロック解除
-  if( ( Distance >= 7.0 ) && ( Distance <= 30.0 ) ) {
+  if( ( Distance >= 7.0 ) && ( Distance <= 50.0 ) ) {
       servo_cnt(SERVO_VAL_ON);
   } else {
       servo_cnt(SERVO_VAL_OFF);
