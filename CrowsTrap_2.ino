@@ -38,7 +38,7 @@ void loop() {
 //    Serial.println( " cm" );
   }
 
-  // 7～30cmの時にロック解除
+  // 7～50cmの時にロック解除
   if( ( Distance >= 7.0 ) && ( Distance <= 50.0 ) ) {
       servo_cnt(SERVO_VAL_ON);
   } else {
